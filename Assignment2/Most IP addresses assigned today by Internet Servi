@@ -1,0 +1,11 @@
+Most IP addresses assigned today by Internet Service Providers are dynamic IP addresses. It's more cost effective for the ISP and you.
+everyone who is online needs a unique IP address. Assigning a permanent, static IP to every ISP subscriber would have been very expensive, when you take into account all the logistics involved. And with the current generation of IP addresses (technically called IPv4), the number of static IP address would have run out fairly quickly.
+
+So the Internet world introduced the concept of dynamic IP addresses. That allowed ISPs to provide their subscribers an IP address that might change if needed. In essence, that IP address is borrowed or "leased" to you whenever you go online.
+
+
+That also allowed static IP addresses to be reserved for businesses and other entities with large networks that didn't want the hassle of tracking different IP addresses for their companies. (The IT departments can distinguish the computers on their network in other ways.)
+
+There’s various reasons for this, be it for security, load balancing purposes, or even migrating services from one platform to another.With dynamic DNS(DDNS) a average websites IP may change several times a day without causing problems.
+
+This is round robin DNS. This is a quite simple solution for load balancing. Usually DNS servers rotate/shuffle the DNS records for each incoming DNS request. Unfortunately it's not a real solution for fail-over. If one of the servers fail, some visitors will still be directed to this failed server.

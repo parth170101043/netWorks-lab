@@ -1,0 +1,124 @@
+(ip.src==10.19.4.181 and ip.dst==162.125.82.1)||(ip.src==162.125.82.1 and ip.dst==10.19.4.181)m525
+(ip.src==10.19.5.64 and ip.dst==162.125.82.1)||(ip.src==162.125.82.1 and ip.dst==10.19.5.64)
+(ip.src==192.168.43.74 and ip.dst==162.125.82.6)||(ip.src==162.125.82.6 and ip.dst==192.168.43.74)
+(ip.src==192.168.43.74 and ip.dst==162.125.81.1)||(ip.src==162.125.81.1 and ip.dst==192.168.43.74)
+(ip.src==192.168.43.74 and ip.dst==162.125.81.1)||(ip.src==162.125.81.1 and ip.dst==192.168.43.74)
+(ip.src==10.19.4.181 and ip.dst==162.125.82.6)||(ip.src==162.125.82.6 and ip.dst==10.19.4.181)
+mobiledown148:(ip.src==192.168.43.74 and ip.dst==162.125.81.6)||(ip.src==162.125.81.6 and ip.dst==192.168.43.74)
+down601 (ip.src==10.19.4.181 and ip.dst==162.125.82.6)||(ip.src==162.125.82.6 and ip.dst==10.19.4.181)
+m252(ip.src==10.19.4.181 and ip.dst==162.125.82.6)||(ip.src==162.125.82.6 and ip.dst==10.19.4.181)
+m252
+mobileupload8am(ip.src==192.168.43.74 and ip.dst==162.125.82.6)||(ip.src==162.125.82.6 and ip.dst==192.168.43.74)
+
+IP addresses are divided into two types: static and dynamic. Static IP addresses do not change, and dynamic addresses do.
+
+
+page 345
+
+page 235
+round robin:
+netmask ordaring:
+
+
+
+In IPv4, the Identification (ID) field is a 16-bit value that is unique for every datagram for a given source address, destination address, and protocol, such that it does not repeat within the maximum datagram lifetime (MDL)
+
+
+Capture 1(2pm, hostel ethernet):src=10.19.4.181,destination=162.125.82.6
+Capture 2(6:30pm ,Hostel ethernet):src=10.19.4.181,destination=162.125.82.6
+Capture 3(8:00am ,Mobile hotspot):src=192.168.43.74,destination=162.125.82.6
+Capture 1(2pm, hostel ethernet)
+Capture 2(6:30pm ,Hostel ethernet)
+Capture 3(8:30am ,Mobile hotspot)
+
+1)A host Ip address change with change in network.That's why it is differnt while using ethernet and mobile hotspot. Even with same network, if a host ip is dynamic(or not static) it may change over time.Multiple Ip's in a host helps in preventing traffic, load balancing and also in security.
+	Websites like dropbox uses round robin DNS which helps in load balancing .Due to round robin DNS ips of websites don't remain constant and changes in a round robin fashion.
+
+
+
+
+
+
+
+5)
+
+
+
+
+
+Frame 459: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Cisco_74:60:43 (ec:44:76:74:60:43), Dst: LcfcHefe_e0:75:cd (54:e1:ad:e0:75:cd)
+    Destination: LcfcHefe_e0:75:cd (54:e1:ad:e0:75:cd)
+        Address: LcfcHefe_e0:75:cd (54:e1:ad:e0:75:cd)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Cisco_74:60:43 (ec:44:76:74:60:43)
+        Address: Cisco_74:60:43 (ec:44:76:74:60:43)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 162.125.82.1, Dst: 10.19.4.181
+Transmission Control Protocol, Src Port: 443, Dst Port: 43700, Seq: 3599, Ack: 1984, Len: 0
+
+
+
+
+
+
+
+
+Frame 458: 1346 bytes on wire (10768 bits), 1346 bytes captured (10768 bits)
+Ethernet II, Src: LcfcHefe_e0:75:cd (54:e1:ad:e0:75:cd), Dst: Cisco_74:60:43 (ec:44:76:74:60:43)
+Internet Protocol Version 4, Src: 10.19.4.181, Dst: 162.125.82.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 1332
+    Identification: 0xb370 (45936)
+    Flags: 0x4000, Don't fragment
+        0... .... .... .... = Reserved bit: Not set
+        .1.. .... .... .... = Don't fragment: Set
+        ..0. .... .... .... = More fragments: Not set
+        ...0 0000 0000 0000 = Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x7f0d [validation disabled]
+    [Header checksum status: Unverified]
+    Source: 10.19.4.181
+    Destination: 162.125.82.1
+Transmission Control Protocol, Src Port: 43700, Dst Port: 443, Seq: 704, Ack: 3599, Len: 1280
+    Source Port: 43700
+    Destination Port: 443
+    [Stream index: 22]
+    [TCP Segment Len: 1280]
+    Sequence number: 704    (relative sequence number)
+    [Next sequence number: 1984    (relative sequence number)]
+    Acknowledgment number: 3599    (relative ack number)
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+    Window size value: 285
+    [Calculated window size: 36480]
+    [Window size scaling factor: 128]
+    Checksum: 0xf81c [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2780525659, TSecr 190081961
+    [SEQ/ACK analysis]
+        [iRTT: 0.000402000 seconds]
+        [Bytes in flight: 1280]
+        [Bytes sent since last PSH flag: 1280]
+    [Timestamps]
+        [Time since first frame in this TCP stream: 1.026832000 seconds]
+        [Time since previous frame in this TCP stream: 0.000052000 seconds]
+    TCP payload (1280 bytes)
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http2
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 1275
+        Encrypted Application Data: 0000000000000002642f885e9a730c672aa34a9a7b5a7bca...
